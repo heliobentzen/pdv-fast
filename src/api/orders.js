@@ -70,7 +70,7 @@ export const createOrder = async (orderData) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       const newOrder = {
-        id: mockOrders.length + 1,
+        id: Math.max(...mockOrders.map(o => o.id), 0) + 1,
         ...orderData,
         status: 'pending',
         createdAt: new Date(),

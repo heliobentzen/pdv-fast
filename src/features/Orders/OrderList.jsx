@@ -7,6 +7,7 @@ const OrderList = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [updateError, setUpdateError] = useState(null);
   const [filter, setFilter] = useState('all');
 
   useEffect(() => {
@@ -29,12 +30,15 @@ const OrderList = () => {
 
   const handleStatusChange = async (orderId, newStatus) => {
     try {
+      setUpdateError(null);
       await updateOrderStatus(orderId, newStatus);
       // Reload orders after status update
       await loadOrders();
     } catch (err) {
       console.error('Erro ao atualizar status do pedido:', err);
-      alert('Erro ao atualizar status do pedido');
+      setUpdateError('Erro ao atualizar status do pedido. Tente novamente.');
+      // Clear error after 5 seconds
+      setTimeout(() => setUpdateError(null), 5000);
     }
   };
 
@@ -60,6 +64,11 @@ const OrderList = () => {
     <div className="order-list">
       <div className="order-list-header">
         <h2>Pedidos</h2>
+        {updateError && (
+          <div className="update-error">
+            {updateError}
+          </div>
+        )}
         <div className="filter-buttons">
           <button
             className={filter === 'all' ? 'filter-btn active' : 'filter-btn'}
