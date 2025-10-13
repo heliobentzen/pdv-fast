@@ -52,7 +52,6 @@ const OrderList = () => {
       // Clear error after 5 seconds
       errorTimeoutRef.current = setTimeout(() => {
         setUpdateError(null);
-        errorTimeoutRef.current = null;
       }, 5000);
     }
   };
