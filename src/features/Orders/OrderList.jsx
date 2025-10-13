@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import OrderCard from './OrderCard';
 import { fetchOrders, updateOrderStatus } from '../../api/orders';
 import './OrderList.css';
@@ -9,9 +9,17 @@ const OrderList = () => {
   const [error, setError] = useState(null);
   const [updateError, setUpdateError] = useState(null);
   const [filter, setFilter] = useState('all');
+  const errorTimeoutRef = useRef(null);
 
   useEffect(() => {
     loadOrders();
+    
+    // Cleanup timeout on unmount
+    return () => {
+      if (errorTimeoutRef.current) {
+        clearTimeout(errorTimeoutRef.current);
+      }
+    };
   }, []);
 
   const loadOrders = async () => {
@@ -31,6 +39,10 @@ const OrderList = () => {
   const handleStatusChange = async (orderId, newStatus) => {
     try {
       setUpdateError(null);
+      // Clear any existing timeout
+      if (errorTimeoutRef.current) {
+        clearTimeout(errorTimeoutRef.current);
+      }
       await updateOrderStatus(orderId, newStatus);
       // Reload orders after status update
       await loadOrders();
@@ -38,7 +50,10 @@ const OrderList = () => {
       console.error('Erro ao atualizar status do pedido:', err);
       setUpdateError('Erro ao atualizar status do pedido. Tente novamente.');
       // Clear error after 5 seconds
-      setTimeout(() => setUpdateError(null), 5000);
+      errorTimeoutRef.current = setTimeout(() => {
+        setUpdateError(null);
+        errorTimeoutRef.current = null;
+      }, 5000);
     }
   };
 
