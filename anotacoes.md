@@ -1,3 +1,5 @@
+Trello: https://trello.com/invite/b/691388a4641e1a8652f29757/ATTI0aa57dcb23d7505e4f6cceb639b8ecbd296AE723/pdv-sistema-gestor-de-pedidos
+
 # Fluxo de telas: #
 
 1. Login
