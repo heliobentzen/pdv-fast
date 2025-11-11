@@ -32,3 +32,13 @@ ____________________________________
 Comandos Git
 git remote -v
 remote set-url oringin https...
+
+components/ui/... (botão, input)
+components/common/... (cards)
+pages (telas de algo)
+components/layout/... (header, footer)
+services/ (api)
+context
+
+hooks/
+models/ (classes oo)
