@@ -1,0 +1,1 @@
+//Tela principal de lançamento de pedidos. Nesta UX, ela atende tanto a visão de Mesas (via TableSelector.jsx) quanto a de Cardápio (via ProductCard.jsx).

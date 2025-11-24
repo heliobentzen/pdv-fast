@@ -1,0 +1,1 @@
+//Componente que encapsula o Sidebar, Navbar e a área de conteúdo para as páginas principais.

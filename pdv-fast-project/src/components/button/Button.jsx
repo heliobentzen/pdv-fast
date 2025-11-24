@@ -1,0 +1,1 @@
+//Componente de botão genérico para interações de UI.

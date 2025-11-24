@@ -1,0 +1,1 @@
+//Funções de login e logout (Lógica de Autenticação)

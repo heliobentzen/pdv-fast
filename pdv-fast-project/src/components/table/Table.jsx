@@ -1,0 +1,1 @@
+//Componente para exibição tabular de dados (ex: relatórios)

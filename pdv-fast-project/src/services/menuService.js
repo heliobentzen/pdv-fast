@@ -1,0 +1,1 @@
+//Funções para buscar menu e categorias (Lógica de Menu), mesmo que usando dados mockados

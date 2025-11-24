@@ -1,0 +1,1 @@
+//Funções para formatação de dados, como moeda (R$), datas, ou números

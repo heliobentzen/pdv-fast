@@ -1,0 +1,1 @@
+//Funções cruciais como submitOrder(), updateStatus(id, status) e fetchOrderHistory (Lógica de Pedido)
