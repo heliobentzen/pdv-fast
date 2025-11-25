@@ -1,0 +1,1 @@
+//Funções auxiliares para validar entradas de formulário (ex: checar se um campo está vazio)

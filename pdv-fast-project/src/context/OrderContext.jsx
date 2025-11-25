@@ -1,0 +1,1 @@
+//O estado do pedido atual (currentOrder), crucial para o gerenciamento do ciclo de vida do pedido

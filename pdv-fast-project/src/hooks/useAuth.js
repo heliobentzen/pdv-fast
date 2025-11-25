@@ -1,0 +1,1 @@
+//Abstração do AuthContext para uso simplificado

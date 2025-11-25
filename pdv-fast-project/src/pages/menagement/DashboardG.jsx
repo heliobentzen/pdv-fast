@@ -1,0 +1,1 @@
+//Tela de Dashboard Gerencial (visão de alto nível das métricas).

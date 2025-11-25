@@ -1,0 +1,1 @@
+//Tela otimizada para a cozinha, servindo como a principal área de status de pedidos "Em Preparação".

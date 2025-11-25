@@ -1,0 +1,1 @@
+//Hook para lidar com estados de loading e error em chamadas de API (Gerenciamento de estado de dados)

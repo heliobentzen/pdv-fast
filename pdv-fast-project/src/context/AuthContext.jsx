@@ -1,0 +1,1 @@
+//O estado do usuário logado e suas permissões (Sessão do usuário)
