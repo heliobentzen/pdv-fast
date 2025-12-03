@@ -1,4 +1,3 @@
-//Componente para menus dropdown.
 import { useState } from "react";
 import "./components.css";
 
