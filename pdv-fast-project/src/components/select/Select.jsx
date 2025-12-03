@@ -1,17 +1,22 @@
-//Componente para seleção de opções.
+import { useState } from "react";
 import "./components.css";
 
-export default function Select({ label, options, value, onChange }) {
+export default function Select({ label = "Selecione", options = [] }) {
+  const [value, setValue] = useState("");
+
+  function handleChange(e) {
+    setValue(e.target.value);
+  }
+
   return (
     <div className="select-container">
-      {label && <label>{label}</label>}
+      {label && <label className="select-label">{label}</label>}
 
-      <select value={value} onChange={(e) => onChange(e.target.value)}>
-        <option value="">Selecione...</option>
-
-        {options.map((item) => (
-          <option key={item.value} value={item.value}>
-            {item.label}
+      <select className="select-input" value={value} onChange={handleChange}>
+        <option value="">Escolha...</option>
+        {options.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
           </option>
         ))}
       </select>
