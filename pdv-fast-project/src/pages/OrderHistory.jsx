@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function OrderHistory() {
-  // Dados mockados (simulação de pedidos)
+ 
   const mockOrders = [
     { id: 1, client: "Maria Souza", total: 42.9, date: "2025-01-10" },
     { id: 2, client: "João Pedro", total: 33.5, date: "2025-01-11" },
@@ -11,12 +11,12 @@ export default function OrderHistory() {
 
   const [search, setSearch] = useState("");
 
-  // Filtro simples
+  
   const filteredOrders = mockOrders.filter((order) => {
     return order.client.toLowerCase().includes(search.toLowerCase());
   });
 
-  // Funções dos botões
+ 
   function handleView(id) {
     alert("Visualizar pedido: " + id);
   }
