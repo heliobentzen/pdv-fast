@@ -1,47 +1,16 @@
-# 🍔 PDV - Fast
+# React + Vite
 
-Este projeto é um **exemplo educacional** de como estruturar um frontend em **React** para um sistema de pedidos no setor de alimentação (restaurantes, bares, lanchonetes).  
-O objetivo é mostrar como organizar o código, consumir dados de uma API (ou mock JSON) e modularizar as features.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🎯 Objetivos do sistema
-- Organizar pedidos e comunicação entre **caixa, cozinha e atendimento**.
-- Melhorar a eficiência no atendimento ao cliente.
-- Exibir **fluxo de pedidos em tempo real**.
-- Fornecer **relatórios claros** para gestores.
-- Ser **responsivo**, funcionando bem em desktop, tablet e celular.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## React Compiler
 
-## 🛠️ Tecnologias utilizadas
-- [React](https://react.dev/)  
-- [Vite](https://vitejs.dev/)  
-- [React Query (TanStack)](https://tanstack.com/query/latest)  
-- [Axios](https://axios-http.com/)  
-- [json-server](https://github.com/typicode/json-server)  
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-## 📦 Pré-requisitos
-- Node.js (versão LTS recomendada)  
-- npm ou yarn  
-
-## Mock API
-
-{
-  "orders": [
-    { "id": 1, "product": "Hambúrguer", "status": "pendente" },
-    { "id": 2, "product": "Pizza", "status": "em preparo" }
-  ],
-  "products": [
-    { "id": 1, "name": "Hambúrguer", "price": 25 },
-    { "id": 2, "name": "Pizza", "price": 40 }
-  ]
-}
-
-Verifique:
-```bash
-node -v
-npm -v
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
