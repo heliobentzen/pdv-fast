@@ -1,1 +1,0 @@
-//Arquivo principal responsável pela configuração do React Router.

@@ -15,4 +15,4 @@ const Radio = ({ label, name, value, checked, onChange }) => {
   );
 };
 
-export default Radio;
+export default Radio;//Componente de radio button.

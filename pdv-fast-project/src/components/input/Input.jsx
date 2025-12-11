@@ -14,4 +14,4 @@ const Input = ({ label, value, onChange, type = "text", placeholder }) => {
   );
 };
 
-export default Input;
+export default Input;//Componente genérico de campo de entrada.
