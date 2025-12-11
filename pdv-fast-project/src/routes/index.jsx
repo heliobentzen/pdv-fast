@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-// Importação das páginas
 import Login from "../pages/Login";
 import KitchenView from "../pages/KitchenView";
 import OrderHistory from "../pages/OrderHistory"; 
