@@ -1,1 +1,0 @@
-//Arquivo para armazenar variáveis estáticas globais (ex: limites de timeout ou códigos de erro)

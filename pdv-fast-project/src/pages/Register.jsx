@@ -1,12 +1,21 @@
-import Register from "../features/Form/Register/Register"
+import { useNavigate } from "react-router-dom";
+import useRegister from "../hooks/useRegister";
+import RegisterForm from "../features/Form/Register/RegisterForm";
 
+export default function Register() {
+    const navigate = useNavigate();
 
+    const {
+        isLoading,
+        errorMessage,
+        handleRegister,
+    } = useRegister(navigate);
 
-
-export default function Home() {
     return (
-        <div>
-            <Register />
-        </div>
+        <RegisterForm
+            onSubmit={handleRegister}
+            isLoading={isLoading}
+            errorMessage={errorMessage}
+        />
     );
 }

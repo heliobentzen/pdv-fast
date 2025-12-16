@@ -1,1 +1,0 @@
-//Cartão individual para itens do menu, usado para a seleção de produto no lançamento de pedidos.

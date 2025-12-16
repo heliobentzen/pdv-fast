@@ -1,13 +1,15 @@
-//Ponto de entrada da aplicação
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import App from "./App";
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
+import { AppProviders } from "./providers/AppProviders";
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
-
+    <AppProviders>
+      <App />
+    </AppProviders>
+  </StrictMode>
+);
