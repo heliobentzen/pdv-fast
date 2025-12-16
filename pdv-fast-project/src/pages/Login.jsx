@@ -1,14 +1,23 @@
-//Interface para login de garçons e gerentes.
+import { useNavigate } from "react-router-dom";
+import useLogin from "../hooks/useLogin";
+import LoginForm from "../features/Form/Login/LoginForm";
 
-import Login from "../features/Form/Login/Login"
+export default function Login() {
+    const navigate = useNavigate();
 
+    const {
+        isLoading,
+        errorMessage,
+        successMessage,
+        handleLogin,
+    } = useLogin(navigate);
 
-
-
-export default function Home() {
     return (
-        <div>
-            <Login />
-        </div>
+        <LoginForm
+            onSubmit={handleLogin}
+            isLoading={isLoading}
+            errorMessage={errorMessage}
+            successMessage={successMessage}
+        />
     );
 }

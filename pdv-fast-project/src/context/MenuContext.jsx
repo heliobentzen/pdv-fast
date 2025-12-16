@@ -1,1 +1,0 @@
-//Armazena o menu completo (produtos e categorias) carregado de forma global
