@@ -1,4 +1,4 @@
-//Componente de botão genérico para interações de UI.
+// Botão simples reutilizável
 const baseStyle =
   "px-4 py-2 rounded font-semibold transition focus:outline-none border border-orange";
 
@@ -51,3 +51,4 @@ export const VoltarButton = ({ onClick }) => (
     Voltar
   </button>
 );
+
