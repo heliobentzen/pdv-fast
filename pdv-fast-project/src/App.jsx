@@ -7,6 +7,7 @@ import OrderHistory from "./pages/OrderHistory";
 import OrderStatus from "./pages/OrderStatus";
 
 import PrivateRoute from "./routes/PrivateRoute";
+import AppLayout from "./components/layout/AppLayout";
 
 import "./App.css";
 
@@ -14,40 +15,25 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         {/* ROTAS PÚBLICAS */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* ROTAS PRIVADAS */}
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <Home />
-            </PrivateRoute>
-          }
-        />
+        <Route element={<PrivateRoute />}>
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/history" element={<OrderHistory />} />
+            <Route path="/status" element={<OrderStatus />} />
+          </Route>
+        </Route>
 
-        <Route
-          path="/history"
-          element={
-            <PrivateRoute>
-              <OrderHistory />
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/status"
-          element={
-            <PrivateRoute>
-              <OrderStatus />
-            </PrivateRoute>
-          }
-        />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+

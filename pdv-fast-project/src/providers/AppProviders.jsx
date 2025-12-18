@@ -1,4 +1,3 @@
-
 import { AuthProvider } from "../contexts/AuthContext";
 import { MenuProvider } from "../contexts/MenuContext";
 import { OrderProvider } from "../contexts/OrderContext";
@@ -18,4 +17,3 @@ export function AppProviders({ children }) {
         </ToastProvider>
     );
 }
-
