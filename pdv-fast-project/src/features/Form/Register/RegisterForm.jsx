@@ -97,8 +97,7 @@ export default function RegisterForm({
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    variant="primary"
-                    className="w-full"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-orange-400 disabled:to-orange-500 text-white font-bold py-4 px-6 rounded-xl shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border-2 border-orange-500/50 disabled:opacity-70 disabled:cursor-not-allowed disabled:shadow-none flex items-center justify-center gap-2 text-lg"
                 >
                     {isLoading ? "Aguarde..." : "Cadastrar"}
                 </Button>

@@ -1,6 +1,6 @@
+import { Suspense } from "react";
 import ModuleContent from "../Card/ModuleContent";
-import ProductList from "../Card/productList";
-import Order from "../Card/Order";
+import { moduleRegistry } from "./moduleRegistry";
 
 export default function ModuleRender({
     modules,
@@ -15,16 +15,37 @@ export default function ModuleRender({
     );
 
     if (!module) {
-        return <div className="text-red-500">Módulo não encontrado</div>;
+        return (
+            <div className="text-red-500">
+                Módulo não encontrado
+            </div>
+        );
     }
 
-    if (module.type === "productlist") {
-        return <ProductList onFinishOrder={onFinishOrder} />;
+    const LazyComponent = moduleRegistry[module.type];
+
+    // 🔹 Se existir componente lazy registrado
+    if (LazyComponent) {
+        return (
+            <Suspense
+                fallback={
+                    <ModuleContent>
+                        Carregando módulo...
+                    </ModuleContent>
+                }
+            >
+                <LazyComponent
+                    order={orderData}
+                    onFinishOrder={onFinishOrder}
+                />
+            </Suspense>
+        );
     }
 
-    if (module.type === "order") {
-        return <Order order={orderData} />;
-    }
-
-    return <ModuleContent>{module.content}</ModuleContent>;
+    // 🔹 Fallback para módulos simples (texto / info)
+    return (
+        <ModuleContent>
+            {module.content}
+        </ModuleContent>
+    );
 }

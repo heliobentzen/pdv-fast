@@ -64,14 +64,6 @@ export default function Navbar() {
                                     }}
                                 />
 
-                                <MenuButton
-                                    icon={<Package size={18} />}
-                                    label="Status Pedidos"
-                                    onClick={() => {
-                                        navigate("/status");
-                                        setOpenMenu(false);
-                                    }}
-                                />
 
                                 <MenuButton
                                     icon={<History size={18} />}
@@ -84,23 +76,23 @@ export default function Navbar() {
 
                                 <div className="border-t border-orange-600 my-2" />
 
-                                <MenuButton
+                                {/* <MenuButton
                                     icon={<User size={18} />}
                                     label="Perfil"
                                     onClick={() => {
                                         navigate("/profile");
                                         setOpenMenu(false);
                                     }}
-                                />
+                                /> */}
 
-                                <MenuButton
+                                {/* <MenuButton
                                     icon={<Settings size={18} />}
                                     label="Configurações"
                                     onClick={() => {
                                         navigate("/settings");
                                         setOpenMenu(false);
                                     }}
-                                />
+                                /> */}
 
                                 <div className="border-t border-orange-600 my-2" />
 

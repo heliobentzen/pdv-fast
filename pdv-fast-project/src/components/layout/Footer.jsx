@@ -1,13 +1,7 @@
-
-
 export default function Footer() {
-
-
     return (
-        <div className="w-96 text-black bg-[#f7f2fa]">
-            <footer>
-                <p>Teste &copy; 2025</p>
-            </footer>
-        </div>
+        <footer className="w-full bg-[#f7f2fa] text-black text-center py-3 border-t">
+            <p>Teste &copy; 2025</p>
+        </footer>
     );
 }
